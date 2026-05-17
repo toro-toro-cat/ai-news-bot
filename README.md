@@ -9,8 +9,10 @@ TechCrunch / VentureBeat / The Verge のRSSフィードから過去24時間のAI
 ### レポートの構成
 
 - 📌 **今日のハイライト** — 全体を3行以内でサマリー
-- 🔥 **注目ニュース TOP3** — 各ニュースを2〜3文で解説＋URLリンク
-- 💡 **注目技術・トレンド** — キーワードを箇条書きで3〜5個
+- 🤖 **AI・テックニュース TOP3** — 各2〜3文で解説＋URLリンク
+- 💼 **ビジネス・経済ニュース TOP3** — 各2〜3文で解説＋URLリンク
+- 🇯🇵 **日本のニュース TOP3** — 日本語ソースから選出、各2〜3文で解説＋URLリンク
+- 💡 **注目トレンド・キーワード** — キーワードを箇条書きで3〜5個
 
 ## セットアップ
 
@@ -62,10 +64,27 @@ python ai_news_report.py
 
 ## ニュースソース
 
-| メディア | フィード |
+### 英語（AI・テック）
+| メディア | 内容 |
 |---|---|
-| TechCrunch | `/category/artificial-intelligence/feed/` |
-| VentureBeat | `/category/ai/feed/` |
-| The Verge | `/rss/ai-artificial-intelligence/index.xml` |
+| TechCrunch | AI特化 + 全般 |
+| VentureBeat | AI・機械学習 |
+| The Verge | テック全般 |
+| Wired | テック・カルチャー |
 
-ソースを変更・追加したい場合は `ai_news_report.py` の `FEEDS` リストを編集する。
+### 英語（ビジネス・経済）
+| メディア | 内容 |
+|---|---|
+| Reuters | ビジネスニュース（無料） |
+| BBC Business | ビジネスニュース（無料） |
+
+### 日本語
+| メディア | 内容 |
+|---|---|
+| ITmedia News | IT・テック全般（無料） |
+| ITmedia AI+ | AI特化（無料） |
+| Gigazine | テック・サイエンス（無料） |
+| ASCII.jp | テック・ガジェット（無料） |
+| NHK 科学・文化 | 科学技術ニュース（無料） |
+
+> 有料記事が多い日経などは除外しています。ソースを変更・追加したい場合は `ai_news_report.py` の `FEEDS` リストを編集してください。
