@@ -21,6 +21,11 @@ FEEDS = [
     "https://ascii.jp/rss.xml",
     # Japanese — General / Science & Tech (NHK, free)
     "https://www3.nhk.or.jp/rss/news/cat4.xml",
+    # 資格・学習・勉強会
+    "https://connpass.com/explore/ja.atom",        # IT勉強会・イベント（connpass）
+    "https://www.ipa.go.jp/rss.rdf",               # IPA 情報処理推進機構（試験情報）
+    # キャリア・転職
+    "https://levtech.jp/media/feed/",              # レバテックキャリアメディア
 ]
 
 def fetch_recent_articles(hours=24):
@@ -63,7 +68,8 @@ def generate_report(articles):
 2. 🤖 **AI・テックニュース TOP3**（各2〜3文で解説＋URLリンク）
 3. 💼 **ビジネス・経済ニュース TOP3**（各2〜3文で解説＋URLリンク）
 4. 🇯🇵 **日本のニュース TOP3**（ITmedia・Gigazine・ASCII・NHKなど日本語ソースから選出、各2〜3文で解説＋URLリンク）
-5. 💡 **注目トレンド・キーワード**（箇条書きで3〜5個）
+5. 📚 **資格・学習・キャリア**（IT資格試験の最新情報、松尾研などのAI講座・勉強会、20代後半〜30代前半のIT転職・キャリアアップに役立つ情報を箇条書きで3件程度。該当情報がなければこのセクションはスキップ）
+6. 💡 **注目トレンド・キーワード**（箇条書きで3〜5個）
 
 ---
 {article_text}"""
